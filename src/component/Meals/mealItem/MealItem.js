@@ -1,10 +1,20 @@
-import React from 'react'
+import React from 'react';
+import classes from './MealItem.module.css';
+import MealItemForm from './MealItemForm';
+
 function MealItem(props) {
+   const price=`$${props.meal.price.toFixed(2)} /- only`
+
     return (
-       <li>
-           <div><h2>{props.name}</h2></div>
-           <div><p>{props.description}</p></div>
-           <div><p>{props.itemPrice}</p></div>
+       <li className={classes.meal}>
+           <div>
+           <h3>{props.meal.name}</h3>
+           <div className={classes.description}>{props.meal.description}</div>
+           <div className={classes.price}>{price}</div>
+           </div>
+           <div>
+               <MealItemForm id={props.meal.id}/>
+           </div>
        </li>
     )
 }
