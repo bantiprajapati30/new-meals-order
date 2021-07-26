@@ -16,14 +16,13 @@ function App() {
   }
   console.log("hello")
   return (
-    <>
+    <CartProvider>
       {isShowCart && <Cart onHideCart={onHideHandler} />}
       <Header onShowCart={onShowHandler} />
       <main>
         <Meals />
       </main>
-
-    </>
+    </CartProvider>
   );
 }
 

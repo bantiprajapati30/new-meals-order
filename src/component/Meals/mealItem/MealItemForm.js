@@ -4,6 +4,10 @@ import classes from './MealItemForm.module.css';
 
 
 function MealItemForm(props) {
+
+     const submitHandler=event=>{
+         event.preventDefault();
+    }
     return (
        <form className={classes.form}>
            <Input label="Ammount" 
