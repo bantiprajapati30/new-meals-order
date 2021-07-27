@@ -4,6 +4,8 @@
     padding: 0;
     max-height: 20rem;
     overflow: auto;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.425);
   }
   
   .total {
@@ -43,4 +45,8 @@
   .actions .button {
     background-color: #8a2b06;
     color: white;
+  }
+  .price-left {
+    padding-right: 10px;
+    float: right;
   }
