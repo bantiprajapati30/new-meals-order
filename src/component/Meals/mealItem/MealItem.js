@@ -1,3 +1,4 @@
+
 import { useContext } from 'react';
 import React from 'react';
 import classes from './MealItem.module.css';
@@ -15,6 +16,7 @@ function MealItem(props) {
          price:props.price
      })
     };
+
     return (
        <li className={classes.meal}>
            <div>
@@ -24,6 +26,7 @@ function MealItem(props) {
            </div>
            <div>
                <MealItemForm onAddToCart={addToCartHandler} id={props.id}/>
+
            </div>
        </li>
     )
