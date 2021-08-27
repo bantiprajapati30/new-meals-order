@@ -22,7 +22,9 @@ function App() {
       <main>
         <Meals />
       </main>
-    </CartProvider>
+    </CartProvider>   
+
+    // this is for testing
   );
 }
 
