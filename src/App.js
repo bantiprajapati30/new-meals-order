@@ -14,7 +14,6 @@ function App() {
   const onHideHandler = () => {
     setIsShowCart(false);
   }
-  console.log("hello")
   return (
     <CartProvider>
       {isShowCart && <Cart onHideCart={onHideHandler} />}

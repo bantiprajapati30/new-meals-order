@@ -1,40 +1,51 @@
+import { useEffect, useState } from 'react';
 import classes from './AvailableMeals.module.css';
 import Card from '../UI/Card';
 import MealItem from './mealItem/MealItem';
-const DUMMY_MEALS = [
-    {
-        id: 'm1',
-        name: 'Sushi',
-        description: 'Finest fish and veggies',
-        price: 22.99,
-    },
-    {
-        id: 'm2',
-        name: 'Schnitzel',
-        description: 'A german specialty!',
-        price: 16.5,
-    },
-    {
-        id: 'm3',
-        name: 'Barbecue Burger',
-        description: 'American, raw, meaty',
-        price: 12.99,
-    },
-    {
-        id: 'm4',
-        name: 'Green Bowl',
-        description: 'Healthy...and green...',
-        price: 18.99,
-    },
-];
+import Spinner from '../UI/Spinner';
+
 
 const AvailableMeals = () => {
+  const [meals, setMeals] = useState([]);
+  const [loader, setLoader] = useState(false)
+    useEffect(()=> {
+        setLoader(true)
+    const fetchMeals = async ()=> {
+        
+        const response = await fetch('https://food-app-f842a-default-rtdb.firebaseio.com/meals.json');
+        const responseData = await response.json();
 
-    const meals=DUMMY_MEALS.map(meal=> <MealItem key={meal.id} id={meal.id} description={meal.description} name={meal.name} price={meal.price}/>)
+        const loadedData =[];
+        
+        for (const key in responseData) {
+            loadedData.push({
+                id: key,
+                name:responseData[key].name,
+                description:responseData[key].description,
+                price:responseData[key].price
+            }); 
+        }
+      setMeals(loadedData)
+      setLoader(false)
+      console.log(loadedData)
+    }
+    setTimeout(() => {
+        fetchMeals();    
+    }, 1000);
+    
+    }, [])
+
+
+    const getMeals=meals.map(meal=> <MealItem key={meal.id} id={meal.id} description={meal.description} name={meal.name} price={meal.price}/>)
     return <section className={classes.meals}>
+       
         <Card>
         <ul>
-            {meals}
+            <div className={classes.loader}>
+            {loader && <Spinner />}
+            </div>
+        
+            {getMeals}
             {/* {DUMMY_MEALS.map((item) => {
                 return (
                    <MealItem key={item.id}
@@ -46,6 +57,7 @@ const AvailableMeals = () => {
                 )
             })} */}
         </ul>
+       
         </Card>
        
     </section>
