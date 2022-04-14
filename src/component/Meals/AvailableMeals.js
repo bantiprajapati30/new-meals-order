@@ -12,22 +12,23 @@ const AvailableMeals = () => {
         setLoader(true)
     const fetchMeals = async ()=> {
         
-        const response = await fetch('https://food-app-f842a-default-rtdb.firebaseio.com/meals.json');
+        const response = await fetch(
+          "https://food-meals-db217-default-rtdb.firebaseio.com/meals.json"
+        );
         const responseData = await response.json();
 
-        const loadedData =[];
-        
+        const loadedData = [];
+
         for (const key in responseData) {
-            loadedData.push({
-                id: key,
-                name:responseData[key].name,
-                description:responseData[key].description,
-                price:responseData[key].price
-            }); 
+          loadedData.push({
+            id: key,
+            name: responseData[key].name,
+            description: responseData[key].description,
+            price: responseData[key].price,
+          });
         }
-      setMeals(loadedData)
-      setLoader(false)
-      console.log(loadedData)
+        setMeals(loadedData);
+        setLoader(false);
     }
     setTimeout(() => {
         fetchMeals();    
