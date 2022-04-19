@@ -36,24 +36,16 @@ const Cart = (props) => {
       }
     )
       .then((res) => {
-        // Unfortunately, fetch doesn't send (404 error)
-        // into the cache itself
-        // You have to send it, as I have done below
         if (res.status >= 400) {
           setDidSubmitted(false);
           setErrorDiv(true);
         }
         return res.json();
       })
-      .then(
-        // Note: it's important to handle errors here
-        // instead of a catch() block so that we don't swallow
-        // exceptions from actual bugs in components
-        (err) => {
-          setErrorMsg(err.error);
-          console.log(err);
-        }
-      );
+      .then((err) => {
+        setErrorMsg(err.error);
+        console.log(err);
+      });
     setSubmittingData(false);
     setDidSubmitted(true);
     cartCtx.clearCart();
