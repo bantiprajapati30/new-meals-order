@@ -50,3 +50,13 @@
     padding-right: 10px;
     float: right;
   }
+  @media screen and (max-width:1366px) {
+    .total {
+      font-size: 1.2rem;
+    }
+  }
+  
+  .submiteData {
+    min-height: 100px;
+    text-align: center;
+  }
