@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/new-meals-order/static/css/main.6d35a085.css",
+    "main.js": "/new-meals-order/static/js/main.1a2c0440.js",
+    "static/media/meals.jpg": "/new-meals-order/static/media/meals.2971f633fc1382581cbf.jpg",
+    "index.html": "/new-meals-order/index.html",
+    "main.6d35a085.css.map": "/new-meals-order/static/css/main.6d35a085.css.map",
+    "main.1a2c0440.js.map": "/new-meals-order/static/js/main.1a2c0440.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6d35a085.css",
+    "static/js/main.1a2c0440.js"
+  ]
+}
