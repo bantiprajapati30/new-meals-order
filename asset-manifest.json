@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/new-meals-order/static/css/main.afac21cd.css",
-    "main.js": "/new-meals-order/static/js/main.4e9bc03d.js",
+    "main.js": "/new-meals-order/static/js/main.ea746ba4.js",
     "static/media/meals.jpg": "/new-meals-order/static/media/meals.2971f633fc1382581cbf.jpg",
     "index.html": "/new-meals-order/index.html",
     "main.afac21cd.css.map": "/new-meals-order/static/css/main.afac21cd.css.map",
-    "main.4e9bc03d.js.map": "/new-meals-order/static/js/main.4e9bc03d.js.map"
+    "main.ea746ba4.js.map": "/new-meals-order/static/js/main.ea746ba4.js.map"
   },
   "entrypoints": [
     "static/css/main.afac21cd.css",
-    "static/js/main.4e9bc03d.js"
+    "static/js/main.ea746ba4.js"
   ]
 }
