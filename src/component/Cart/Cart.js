@@ -91,7 +91,7 @@ const Cart = (props) => {
   const successfullyDataModal = (
     <React.Fragment>
       <div className={classes.submiteData}>
-        <p>{errorDiv ? errorMsg : "Successfully sent the oder!"}</p>
+        <p>{errorDiv ? errorMsg : "Successfully sent the order!"}</p>
         <div className={classes.actions}>
           <button className={classes.button} onClick={props.onHideCart}>
             Close

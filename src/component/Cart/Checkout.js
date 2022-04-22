@@ -74,7 +74,7 @@ const Checkout = (props) => {
         <div className={cityClasses}>
           <label htmlFor="city">City</label>
           <input type="text" id="city" ref={cityInputRef} />
-          {!formValidity.city && <p>Please enter the name</p>}
+          {!formValidity.city && <p>Please enter the city</p>}
         </div>
         <div className={classes.actions}>
           <button type="button" onClick={props.onCancel}>
