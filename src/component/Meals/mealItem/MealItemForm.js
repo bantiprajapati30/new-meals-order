@@ -5,8 +5,10 @@ import classes from './MealItemForm.module.css';
 
 
 function MealItemForm(props) {
+    console.log('props: ', props);
     const [amountIsValid, setAmountIsValid] = useState(true);
     const amountInputRef = useRef()
+
 
     const submitHandler = event => {
         event.preventDefault();
@@ -14,12 +16,15 @@ function MealItemForm(props) {
         const enterAmountNumber = +enterAmount;
 
         if (enterAmount.trim().length === 0 || enterAmountNumber < 1 || enterAmountNumber > 5) {
-           setAmountIsValid(false)
+            setAmountIsValid(false)
             return;
         }
         props.onAddToCart(enterAmountNumber);
-        
+
     };
+    if (props.hide) {
+        return null;
+    }
     return (
         <form className={classes.form} onSubmit={submitHandler}>
             <Input

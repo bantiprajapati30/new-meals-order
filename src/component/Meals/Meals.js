@@ -1,11 +1,12 @@
 
+import AddMeals from "./AddMeals";
 import AvailableMeals from "./AvailableMeals"
 import MealsSummary from "./MealsSummary"
-const Meals =()=> {
-    
+const Meals = () => {
+
     return <>
-       <MealsSummary /> 
-       <AvailableMeals />
-    </> 
+        <MealsSummary />
+        <AvailableMeals />
+    </>
 }
 export default Meals;

@@ -1,27 +1,20 @@
-import { useState } from 'react';
-import Cart from './component/Cart/Cart';
-import Header from './component/Layout/Header'
-import Meals from './component/Meals/Meals';
-import CartProvider from './store/CartProvider';
-
-
+import { React, lazy, Suspense } from 'react'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+const Dashboard = lazy(() => import('./component/dashboard/dashboard'))
+const Order = lazy(() => import('./component/orders/Order'))
+const ManageMeals = lazy(() => import('./component/Meals/ManageMeals'))
 function App() {
-  const [isShowCart, setIsShowCart] = useState(false);
 
-  const onShowHandler = () => {
-    setIsShowCart(true);
-  }
-  const onHideHandler = () => {
-    setIsShowCart(false);
-  }
   return (
-    <CartProvider>
-      {isShowCart && <Cart onHideCart={onHideHandler} />}
-      <Header onShowCart={onShowHandler} />
-      <main>
-        <Meals />
-      </main>
-    </CartProvider>   
+    <Suspense fallback={<div>Loading...</div>}>
+      <Router>
+        <Routes>
+          <Route index path="/" Component={Dashboard} />
+          <Route path="/orders" Component={Order} />
+          <Route path="/add-meals" Component={ManageMeals} />
+        </Routes>
+      </Router>
+    </Suspense>
 
     // this is for testing
   );

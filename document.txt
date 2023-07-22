@@ -1,0 +1,16 @@
+
+
+//now I need a add new functionality in below steps //08-07-2023
+1. fetch all meals in manage meals link
+2. here two tab or two section, one is added new items in the meals list, another one is edit the exist meals
+3. here also should have not visible the particular meal when user toggle the button 
+4. when user select a particular meal and the whole data will come in the input fields
+
+
+when firebase data base not connecting so we need to take these step in below:
+
+Go to the "Database" option you mentioned.
+There on the Blue Header you'll find a dropdown which says Cloud Firestore Beta
+Change it to "Realtime database"
+Go to Rules and set .write .read both to true
+

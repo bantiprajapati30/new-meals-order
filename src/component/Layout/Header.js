@@ -2,16 +2,20 @@ import React from 'react'
 import Meals from '../../assets/images/meals.jpg'
 import classes from './Header.module.css';
 import HeaderCartButton from './HeaderCartButton';
-const Header=(props)=> {
+import Profile from './Dropdown';
+const Header = (props) => {
   return <>
-  <header className={classes.header}>
+    <header className={classes.header}>
       <h1>Your Meals</h1>
-     <HeaderCartButton  onClick={props.onShowCart}/>
-  </header>
-  
-  <div>
+      <div className='d-flex'>
+        <HeaderCartButton onClick={props.onShowCart} fetchOrders={props.fetchOrders} />
+        <Profile />
+      </div>
+
+    </header>
+    <div>
       <img src={Meals} alt="meals" className={classes['main-image']} />
-  </div>
+    </div>
   </>
 }
 export default Header;

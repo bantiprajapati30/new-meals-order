@@ -1,0 +1,91 @@
+.orderhistory {
+  padding: 20px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.ordercard {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.orderdetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.orderid {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333333;
+}
+
+.orderdate {
+  font-size: 14px;
+  color: #999999;
+}
+
+.userdetails {
+  margin-bottom: 10px;
+}
+
+.customername {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333333;
+}
+
+.customeraddress {
+  font-size: 14px;
+  color: #999999;
+}
+
+.orderitems {
+  padding-top: 10px;
+}
+
+.subtitle {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+.itemlist {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  margin-bottom: 10px;
+}
+
+.itemname {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333333;
+}
+
+.itemquantity {
+  font-size: 14px;
+  color: #999999;
+}
+
+.itemprice {
+  font-size: 14px;
+  font-weight: bold;
+  color: #ff6600;
+}
+/* h3 {
+  text-align: center;
+} */

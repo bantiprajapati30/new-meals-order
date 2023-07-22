@@ -25,6 +25,11 @@ const Cart = (props) => {
   };
   const submitOrderHandler = async (userData) => {
     setSubmittingData(true);
+    let current = new Date();
+    const timeDates = {
+      date: current.toLocaleDateString(),
+      time: current.toLocaleTimeString()
+    }
     await fetch(
       "https://food-meals-db217-default-rtdb.firebaseio.com/orders.json",
       {
@@ -32,6 +37,7 @@ const Cart = (props) => {
         body: JSON.stringify({
           user: userData,
           orderedItems: cartCtx.items,
+          dateTime: timeDates
         }),
       }
     )
